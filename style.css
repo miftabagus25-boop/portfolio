@@ -16,29 +16,70 @@ header {
   text-align: center;
 }
 
-/* NAVBAR RESPONSIVE */
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 10px;
+/* NAV CONTAINER */
+.nav-container {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap; /* 🔥 penting */
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
   background-color: #11b71c;
+  padding: 10px 20px;
 }
 
-nav ul li {
-  margin: 0;
+/* LOGO */
+.logo {
+  color: white;
+  font-weight: bold;
 }
 
-nav ul li a {
-  color: #fff;
+/* MENU DEFAULT (DESKTOP) */
+#nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+/* LINK */
+#nav-menu li a {
+  color: white;
   text-decoration: none;
   font-weight: bold;
-  padding: 8px 12px;
-  display: block;
-  border-radius: 5px;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  #nav-menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #11b71c;
+    flex-direction: column;
+    align-items: center;
+
+    display: none; /* sembunyi */
+  }
+
+  #nav-menu.active {
+    display: flex; /* muncul saat diklik */
+  }
+
+  #nav-menu li {
+    padding: 10px 0;
+  }
 }
 
 /* TABLE RESPONSIVE */

@@ -14,13 +14,23 @@
     </header>
 
     <nav>
-        <ul>
-            <li> <a href="#about">TENTANG SAYA</a></li>
-            <li> <a href="#datadiri">DATA DIRI</a></li>
-            <li> <a href="#project">PROYEK SAYA</a></li>
-            <li> <a href="#contact">KONTAK</a></li>
-        </ul>
-    </nav>
+  <div class="nav-container">
+    <div class="logo">MENU</div>
+
+    <!-- tombol hamburger -->
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <ul id="nav-menu">
+      <li><a href="#about">TENTANG SAYA</a></li>
+      <li><a href="#datadiri">DATA DIRI</a></li>
+      <li><a href="#project">PROYEK SAYA</a></li>
+      <li><a href="#contact">KONTAK</a></li>
+      <li><a href="#dokumen-pendukung">DOKUMEN</a></li>
+    </ul>
+  </div>
+</nav>
 
     <section id="about">
         <h2>TENTANG SAYA</h2>
@@ -150,5 +160,13 @@
     <footer>
         <p>&copy; 2026 BAGUS MIFTAKHUROHMAN. ALL RIGHTS RESERVED.</p>
     </footer>
+    <script>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("nav-menu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+</script>
 </body>
 </html>
